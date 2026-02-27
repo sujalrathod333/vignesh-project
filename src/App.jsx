@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import './App.css'
-import main from '../public/img/mainfarwell images.jpeg'
+import main from '../public/img/17.jpeg'
 
 function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const videos = [
     { src: '/vid2.mp4', ratio: '16:9', featured: true },
+    { src: '/vid3.mp4', ratio: '16:9', featured: true },
     { src: '/vid1.mp4', ratio: '9:16' },
     { src: '/vid4.mp4', ratio: '9:16' },
     { src: '/vid5.mp4', ratio: '9:16' },
   ];
 
-  const photos = Array.from({ length: 14 }, (_, i) => `/img/${i + 1}.jpeg`);
+  const photos = Array.from({ length: 18 }, (_, i) => `/img/${i + 1}.jpeg`);
 
   const handleDownload = (src, type) => {
     const link = document.createElement('a');
@@ -37,9 +38,12 @@ function App() {
               <img src={main} alt="School" />
             </div>
             <div className="hero-text">
-              <h1 className="school-name">Sanjivani Vidyalaya</h1>
+              <h1 className="school-name">Dil Dosti Duniyadari.</h1>
               <div className="divider"></div>
-              <p className="tagline">Dil Dosti Duniyadari.</p>
+              <pre className="tagline">
+                Sanjivani Vidyalaya
+                 batch 2025-2026
+              </pre>
             </div>
           </div>
         </div>
@@ -82,11 +86,31 @@ function App() {
             </button>
           </div>
 
+          <div className="featured-video">
+            <div className="video-container">
+              <div className="photo-number">V2</div>
+              <video 
+                src={videos[1].src}
+                controls
+                className="gallery-video"
+              />
+            </div>
+            <button 
+              className="btn-download-external" 
+              onClick={() => handleDownload(videos[1].src, 'video')}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download Video
+            </button>
+          </div>
+
           <div className="video-grid">
-            {videos.slice(1).map((video, i) => (
+            {videos.slice(2).map((video, i) => (
               <div key={`video-${i}`} className={`video-item ${video.ratio === '9:16' ? 'vertical' : 'horizontal'}`}>
                 <div className="video-container">
-                  <div className="photo-number">V{i + 2}</div>
+                  <div className="photo-number">V{i + 3}</div>
                   <video 
                     src={video.src}
                     controls
@@ -139,6 +163,10 @@ function App() {
             ))}
           </div>
         </div>
+        <h5 style={{
+          display: 'flex',
+          justifyContent: 'flex-end'
+        }} >__VighnuuM</h5>
       </div>
 
       <footer className="footer">
