@@ -90,13 +90,15 @@ body {
 }
 
 .school-name {
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(1.8rem, 6vw, 5rem);
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 20px;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   animation: fadeInUp 1s ease;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 .divider {
@@ -108,12 +110,16 @@ body {
 }
 
 .tagline {
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
   color: #f0f0f0;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   animation: fadeInUp 1.4s ease;
+}
+
+.tagline p {
+  margin: 5px 0;
 }
 
 @keyframes fadeInUp {

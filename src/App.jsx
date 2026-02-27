@@ -40,10 +40,10 @@ function App() {
             <div className="hero-text">
               <h1 className="school-name">Dil Dosti Duniyadari.</h1>
               <div className="divider"></div>
-              <pre className="tagline">
-                Sanjivani Vidyalaya
-                 batch 2025-2026
-              </pre>
+              <div className="tagline">
+                <p>Sanjivani Vidyalaya</p>
+                <p>batch 2025-2026</p>
+              </div>
             </div>
           </div>
         </div>
