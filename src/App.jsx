@@ -13,7 +13,7 @@ function App() {
     { src: '/vid5.mp4', ratio: '9:16' },
   ];
 
-  const photos = Array.from({ length: 18 }, (_, i) => `/img/${i + 1}.jpeg`);
+  const photos = Array.from({ length: 19 }, (_, i) => `/img/${i + 1}.jpeg`);
 
   const handleDownload = (src, type) => {
     const link = document.createElement('a');
